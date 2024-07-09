@@ -51,7 +51,7 @@ def send_email(subject, body):
 
 
 def schedule_email(messages):
-    current_hour = datetime.now().hour
+    current_hour = datetime.now().hour + 9
     for message in messages:
         if message['hour'] == current_hour:
             send_email(message['subject'], message['body'])
