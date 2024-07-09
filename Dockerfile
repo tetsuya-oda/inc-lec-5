@@ -2,7 +2,9 @@
 FROM ubuntu:20.04
 
 COPY requirement.txt /app/requirement.txt
-COPY send_email.py /app/send_email.py
+COPY .env /app/.env
+COPY message.json /app/message.json
+COPY send_email_2.py /app/send_email_2.py
 
 # パッケージのインストール
 RUN apt update && \
